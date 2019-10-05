@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./muitiple_quiz.css">
+</head>
+
+<body>
+    <div class="quiz-ident-container">
+        <div class="quiz-ident checked"></div>
+        <div class="quiz-ident current"></div>
+        <div class="quiz-ident"></div>
+        <div class="quiz-ident"></div>
+        <div class="quiz-ident"></div>
+        <div class="quiz-ident"></div>
+    </div>
+    <div class="quiz-count">
+        <p>1 / 6</p>
+    </div>
+    <div class="quiz-container">
+        <h1 id='title'>abc</h1>
+        <div id='quiz-content' class="quiz-content">
+            <img id='quiz-image'
+                src="https://blog.visme.co/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg"
+                alt="">
+            <div class="quiz-choice" onclick="choiceOnClick(event)">
+                <h3 class="option">A</h3>
+                <p class='content'>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="quiz-choice" onclick="choiceOnClick(event)">
+                <h3 class="option" style="padding: 5px 9.6px;">B</h3>
+                <p class='content'>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="quiz-choice" onclick="choiceOnClick(event)">
+                <h3 class="option">C</h3>
+                <p class='content'>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+            <div class="quiz-choice" onclick="choiceOnClick(event)">
+                <h3 class="option">D</h3>
+                <p class='content'>Lorem, ipsum dolor sit amet consectetur adipisicing elit</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./multiple_quiz.js"></script>
+</body>
+
+</html>

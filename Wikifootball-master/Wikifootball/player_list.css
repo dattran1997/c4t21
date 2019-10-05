@@ -1,0 +1,32 @@
+.container {
+    max-width: 720px;
+}
+
+.card-body{
+    
+}
+
+.footballer-container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    margin: 0px auto;
+}
+
+.image-item{
+    width: 16rem;
+    height: 16rem;
+}
+
+
+.footballer-item {
+    padding:10px;
+    
+}
+.background-color {
+    background-color: #34495e;
+}
+
+  
+ 

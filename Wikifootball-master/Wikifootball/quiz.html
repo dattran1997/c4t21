@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wikifootball</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Main css -->
+    <link rel='stylesheet' href='home_page.css'>
+    <link rel="stylesheet" href='player_list.css'>
+    <link rel="stylesheet" href='quiz.css'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/JavaScript">
+        function Questions(divname) {
+           this.QText   = new Array(20); // The questions
+           this.QAnswer = new Array(20); // The correct answers
+           this.QChoice = new Array(80); // The possible multi-choice values
+           this.thisAns = new Array(10); // The answers for this page
+           this.Answer  = new Array(10); // The user's answers
+           this.anchor = document.getElementById(divname);
+        
+           // OK, set the questions
+           this.QText[0] = "What is the capital of Norway";
+           this.QText[1] = "What is the capital of Hungary";
+           this.QText[2] = "What is the capital of Cyprus";
+           this.QText[3] = "What is the capital of Libya";
+           this.QText[4] = "What is the capital of Kenya";
+           this.QText[5] = "What is the capital of Nigeria";
+           this.QText[6] = "What is the capital of Columbia";
+           this.QText[7] = "What is the capital of Barbados";
+           this.QText[8] = "What is the capital of Australia";
+           this.QText[9] = "What is the capital of Pakistan";
+           this.QText[10] = "What is the capital of Spain";
+           this.QText[11] = "What is the capital of England";
+           this.QText[12] = "What is the capital of Ireland";
+           this.QText[13] = "What is the capital of Sweden";
+           this.QText[14] = "What is the capital of Denmark";
+           this.QText[15] = "What is the capital of Poland";
+           this.QText[16] = "What is the capital of Italy";
+           this.QText[17] = "What is the capital of India";
+           this.QText[18] = "What is the capital of Canada";
+           this.QText[19] = "What is the capital of Portugal";
+        
+           // Now, set the possible choices
+           this.QChoice[0] = "Bergen";
+           this.QChoice[1] = "Trondheim";
+           this.QChoice[2] = "Oslo";
+           this.QChoice[3] = "Haugesund";
+
+           this.QChoice[4] = "Warsaw";
+           this.QChoice[5] = "Budapest";
+           this.QChoice[6] = "Bucharest";
+           this.QChoice[7] = "Vienna";
+
+           this.QChoice[8] = "Crete";
+           this.QChoice[9] = "Nicosia";
+           this.QChoice[10] = "Athens";
+           this.QChoice[11] = "Saloniki";
+
+           this.QChoice[12] = "Tehran";
+           this.QChoice[13] = "Cairo";
+           this.QChoice[14] = "Tripoli";
+           this.QChoice[15] = "Baghdad";
+
+           this.QChoice[16] = "Nairobi";
+           this.QChoice[17] = "Mombasa";
+           this.QChoice[18] = "Zanzibar";
+           this.QChoice[19] = "Kampala";
+
+           this.QChoice[20] = "Laos";
+           this.QChoice[21] = "Harare";
+           this.QChoice[22] = "Douala";
+           this.QChoice[23] = "Lagos";
+
+           this.QChoice[24] = "Bogota";
+           this.QChoice[25] = "Cali";
+           this.QChoice[26] = "Medellin";
+           this.QChoice[27] = "Panama";
+
+           this.QChoice[28] = "Havana";
+           this.QChoice[29] = "Bridgetown";
+           this.QChoice[30] = "Kingston";
+           this.QChoice[31] = "Montego Bay";
+
+           this.QChoice[32] = "Sydney";
+           this.QChoice[33] = "Brisbane";
+           this.QChoice[34] = "Melbourne";
+           this.QChoice[35] = "Canberra";
+
+           this.QChoice[36] = "Kabul";
+           this.QChoice[37] = "Karachi";
+           this.QChoice[38] = "Islamabad";
+           this.QChoice[39] = "New Delhi";
+
+           this.QChoice[40] = "Bergen";
+           this.QChoice[41] = "Madrid";
+           this.QChoice[42] = "Oslo";
+           this.QChoice[43] = "Haugesund";
+
+           this.QChoice[44] = "London";
+           this.QChoice[45] = "Budapest";
+           this.QChoice[46] = "Bucharest";
+           this.QChoice[47] = "Vienna";
+
+           this.QChoice[48] = "Crete";
+           this.QChoice[49] = "Dublin";
+           this.QChoice[50] = "Athens";
+           this.QChoice[51] = "Saloniki";
+
+           this.QChoice[52] = "Tehran";
+           this.QChoice[53] = "Stockholm";
+           this.QChoice[54] = "Tripoli";
+           this.QChoice[55] = "Baghdad";
+
+           this.QChoice[56] = "Nairobi";
+           this.QChoice[57] = "Mombasa";
+           this.QChoice[58] = "Copenhagen";
+           this.QChoice[59] = "Kampala";
+
+           this.QChoice[60] = "Warsaw";
+           this.QChoice[61] = "Harare";
+           this.QChoice[62] = "Douala";
+           this.QChoice[63] = "Lagos";
+
+           this.QChoice[64] = "Bogota";
+           this.QChoice[65] = "Cali";
+           this.QChoice[66] = "Medellin";
+           this.QChoice[67] = "Rome";
+
+           this.QChoice[68] = "New Delhi";
+           this.QChoice[69] = "Bridgetown";
+           this.QChoice[70] = "Kingston";
+           this.QChoice[71] = "Montego Bay";
+
+           this.QChoice[72] = "Sydney";
+           this.QChoice[73] = "Brisbane";
+           this.QChoice[74] = "Ottawa";
+           this.QChoice[75] = "Canberra";
+
+           this.QChoice[76] = "Kabul";
+           this.QChoice[77] = "Karachi";
+           this.QChoice[78] = "Islamabad";
+           this.QChoice[79] = "Lisbon";
+        
+           // Set the correct answers
+           this.QAnswer[0] = 3;
+           this.QAnswer[1] = 2;
+           this.QAnswer[2] = 2;
+           this.QAnswer[3] = 3;
+           this.QAnswer[4] = 1;
+           this.QAnswer[5] = 4;
+           this.QAnswer[6] = 1;
+           this.QAnswer[7] = 2;
+           this.QAnswer[8] = 4;
+           this.QAnswer[9] = 3;
+           this.QAnswer[10] = 3; // these answers are wrong - check them yourself!
+           this.QAnswer[11] = 2;
+           this.QAnswer[12] = 2;
+           this.QAnswer[13] = 3;
+           this.QAnswer[14] = 1;
+           this.QAnswer[15] = 4;
+           this.QAnswer[16] = 1;
+           this.QAnswer[17] = 2;
+           this.QAnswer[18] = 4;
+           this.QAnswer[19] = 3;
+        
+        }
+        
+        Questions.prototype.generateQuiz = function() {
+           var QCount = 0;
+           var QNumber = 0;
+        
+           // Initialise the "questions available" table
+           var QUsed = new Array(20);
+           for (QCount=0; QCount<20; QCount++) {
+              QUsed[QCount] = 1; // Marked as available
+           }
+        
+           // Delete any existing questions
+           //this.nukeExistingQuiz();
+           this.anchor.innerHTML = "";
+        
+           var HTMLBlob = "<table class=\' w3-table\'>";
+        
+           // Build up the questions
+           for (QCount=0; QCount<10; ) {
+              QNumber = Math.floor(20 * Math.random());
+              if (1 == QUsed[QNumber]) { // Still available?
+             HTMLBlob += this.AddQuestion(QNumber, QCount);
+             QCount++;
+                 QUsed[QNumber] = 0; // Marked as unavailable
+              }
+           }
+           HTMLBlob += "</table>";
+           this.anchor.innerHTML = HTMLBlob;
+        }
+        
+        // This removes any existing quiz on the page
+        Questions.prototype.nukeExistingQuiz = function() {
+           if (null != this.anchor && null != this.anchor.childCount) {
+              while (this.anchor.childCount > 0) {
+                 this.anchor.removeChild(this.anchor.childNodes[0]);
+              }
+           }
+        }
+        
+        // Add this to the DOM
+        Questions.prototype.AddQuestion = function(QNum, EntryNum) {
+           // This is really naughty: you should use DOM stuff, and not
+           // non-standard innerHtml ...
+           var Ix;
+           var HTMLBlob = "<tr class=\"each_quiz \"><td><input type=\"checkbox\" id=\"check" + EntryNum + "\" checked=\"checked\"></td><td>"
+                               + "Question #" + (EntryNum+1) + ":</td><td>"
+                               + "<strong>" + this.QText[QNum] + "</strong></td><td><select id=\"answer" + EntryNum + "\" size=\"1\">"
+                               + "<option selected=\"selected\" value=\"0\">-- Select an answer --</option>"
+           for (Ix=0; Ix<4; Ix++) {
+              HTMLBlob = HTMLBlob + "<option value=\"" + Ix + "\">" + this.QChoice[QNum*4+Ix] + "</option>";
+           }
+           HTMLBlob = HTMLBlob + "</select></td></tr>";
+           
+           this.thisAns[EntryNum] = this.QAnswer[QNum];
+           return HTMLBlob;
+        }
+        
+        
+        // Verify that all questions have been answered
+        Questions.prototype.AreQuestionsAnswered = function() {
+           var unanswered = 0;
+           for (var Ix=0; Ix<10; Ix++) {
+              this.Answer[Ix] = document.getElementById("answer" + Ix).selectedIndex;
+              if (this.Answer[Ix] == 0) {
+                 unanswered++;
+              }
+           }
+           return unanswered;
+        }
+        
+        // Score the results
+        Questions.prototype.ScoreIt = function() {
+           var count = this.AreQuestionsAnswered();
+           if (count > 0) {
+              alert("You didn't answer " + count + " questions. Please try again.");
+              count = 0;
+           } else {
+              for (var Ix=0; Ix<10; Ix++) {
+                 if (this.Answer[Ix] == this.thisAns[Ix]) {
+                    document.getElementById("check" + Ix).checked = true;
+                    count++;
+                 } else {
+                    document.getElementById("check" + Ix).checked = false;
+                 }
+              }
+              
+              
+              document.getElementById('results').innerHTML = 'You got '+ count + ' correct.';
+           }
+           return count;
+        }
+        </script>
+
+</head>
+<body>
+
+    <!-- Nav Menu -->
+    <div class='nav-menu'>
+            <nav class="navbar navbar-expand-lg background-color d-flex sticky-top">
+                    <a class="navbar-brand text-center text-bold text-white" href="home_page.html">WIKIFOOTBALL</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                              
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="player_list.html">Player List</a>
+                                  
+                                </li>
+                                <li class=' nav-item'>
+                                    <a class='nav-link text-white' href='manager_list.html'>Manager List</a>
+                                </li>
+                                <li class=' nav-item'>
+                                        <a class='nav-link text-white' href='search.html'>Player Search</a>
+                                </li>
+                                <li class=' nav-item'>
+                                        <a class='nav-link text-white' href='#'>Question</a>
+                                </li>
+                                <li class=' nav-item'>
+                                    <a class='nav-link text-white' href='quiz.html'>Quiz</a>
+                                </li>
+                              
+                              
+                            </ul>
+                            
+                          </div>
+        
+                </nav>
+            
+        </div>
+        <div id="quizblock"></div>
+
+        <script type="text/JavaScript">
+           var MyQuiz = new Questions("quizblock");
+           MyQuiz.generateQuiz();
+        </script>
+     
+        <input type="button" onclick="MyQuiz.ScoreIt();" value="Done">
+        <p id = 'results'></p>
+    
+</body>
+</html>
+
+
+    
+    
+    
+    
+    
+       
